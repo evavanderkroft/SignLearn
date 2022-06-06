@@ -19,37 +19,37 @@
             </div>
         </div>
         <div class="container-sm">
-            <div class="card card-sm">
-                
+            <div class="card card-sm ">
                 <div class="card-text text-center">
                     <h2 class="card-title"> Try to repeat this frame </h2>
-                    <p class="card-subtitle mb-2 text-muted"> Maybe you do not want to use your camera or you are not able to.  </p>
-                    </div>
+                    <p class="card-subtitle mb-2 text-muted"> Try to get as close to the example shown as possible </p>
+                </div>
 
-                <div class="card-body d-flex justify-content-center align-items-center">
-                    <button type="button" onclick="init()" class="btn btn-success " id="button-start">Start Camera </button>
-                    <div id="webcam-container"></div>
-
-                    <div id="prediction-container">
-                        <div>Your trash is..</div>
+                <div class="card-body d-flex  ">
+                    <div class="row row-camera">
+                        <div class="col-6">
+                            <img src="./img/please-sign-language.gif" style="width: 300px; height: 300px; padding:0px; background-size:cover;">
+                        </div>
+                        <div class="col-6">
+                            <div id="webcam-container"></div>
+                        </div>
                     </div>
+                   
+                </div>
+ <div id="label-container"></div>
+                <div class="card-button d-flex justify-content-center align-center">
                     
-                    <div id="label-container"></div>
+                    <button type="button" onclick="init()" class="btn btn-success " id="button-start">Start Camera </button>
+                </div>
 
-                    <!-- <div class="buttons">    
-                        <a type="button" href="index.html" class="btn btn-success "  id="button-start">With camera</a>
-                        <a type="button" href="index.html" class="btn btn-success "  id="button-start">without camera </a>
-                    </div> -->
-                </div>
-                </div>
-            </div></div>
+            </div>
         </div>
+    </div>
     </body>
 
 <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@1.3.1/dist/tf.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/@teachablemachine/image@0.8/dist/teachablemachine-image.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
-<script src="arduino.js"></script>
-<script src="js/main.js"></script>
+<script src="js/main2.js"></script>
 </body>
 </html>

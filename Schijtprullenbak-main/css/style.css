@@ -1,23 +1,21 @@
-
+/* 
 #webcam-container {
     position: absolute;
     top: 60%;
     opacity: 80%;
     left: 48%;    
-}
+} */
 
-#prediction-container {
+/* #prediction-container {
     position: absolute;
     top: 20%;
     left: 42.5%;
     font-size: 4vw;
     color: rgb(255, 255, 255);
-}
+} */
 
 div#label-container {
-    padding: 10px;
-    background-color: rgb(255, 255, 255,0.3);
-    margin-right: 85%;
+   color: black;
 }
 
 a{
@@ -51,4 +49,16 @@ h1{
 }
 a{
     text-decoration: none;
+}
+
+.row-camera{
+    align-items: center;
+    justify-content: space-around;
+    width: 70vw;
+}
+
+.col-6{
+    justify-self: center;
+    width: 30%;
+    height: 30vh;
 }
