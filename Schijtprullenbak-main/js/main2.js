@@ -50,7 +50,7 @@
             console.log("doet het")
         }
 
-        if (count > 300) {
+        if (count > 200) {
             console.log("doet het nogmaals");
             window.location.href = "rightMovement.html";
         }

@@ -12,29 +12,31 @@
     <div class="container-md ">
         <div class="navbar">
             <a href="index.html">
-                <img id="logo" src="./img/logo.png" alt="Girl in a jacket" height="70" width="auto" > </a>
+                <img id="logo" src="./img/logo.png" alt="logo" height="70" width="auto" > </a>
             <div class="d-grid gap-2 d-md-flex justify-content-md-end">     
-                <!-- <a type="button" class="btn btn-success me-md-2"  href="signup.html" id="button-start">Sign up</a> -->
                 <a type="button" class="btn btn-success" href="account.html" id="button-start">My account</a>
             </div>
         </div>
-        <div class="container-sm">
-            <div class="card card-sm ">
-                <div class="card-text text-center  ">
-                        <h2 class="card-title"> Are you able and willing to make use of your camera? </h2>
-                        <p class="card-subtitle mb-2 text-muted"> Maybe you do not want to use your camera or you are not able to.  </p>
-                    </div>
+        <div class="container-sm ">
+            <div class="card card-sm d-flex justify-content-center align-items-center"> 
+                <div class="card-text">
+                        <h2 class="card-title text-center"> You chose the right answer! </h2>
+                        <h4 class="card-title text-center"> The word being signed is I LOVE YOU </h4>
+                </div>
+                <div class="card-video ">
+                    <img src="./img/i-love-you-sign-language.gif" alt="i love you" width="400" height="auto">
+                </div>
+
                 <div class="card-body d-flex justify-content-center align-items-center">
-                    
-                    <div class="">    
-                        <a type="button" href="withcamera.html"  onclick="init()" class="btn btn-success "  id="button-start">With camera</a>
-                        <a type="button" href="withoutcamera.html" class="btn btn-success "  id="button-start">without camera </a>
-                    </div>
+                    <a type="button" class="btn btn-success " href="account.html" id="button-start">Back to start</a>
+                    <a type="button" class="btn btn-success " href="withoutCamera.html" id="button-start">New sign</a>
                 </div>
-                </div>
-            </div></div>
+
+            </div>
         </div>
+    </div>
     </body>
+
 
 <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@1.3.1/dist/tf.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/@teachablemachine/image@0.8/dist/teachablemachine-image.min.js"></script>

@@ -1,27 +1,21 @@
-    // More API functions here:
+
+// More API functions here:
     // https://github.com/googlecreativelab/teachablemachine-community/tree/master/libraries/image
 
     // the link to your model provided by Teachable Machine export panel
-    const URL = "./my_model/";
+    const URL = "./my_model2/";
 
     let model, webcam, labelContainer, maxPredictions;
 
+    
     let div = document.createElement("div");
     let predictionContainer = document.getElementById("prediction-container");
-
-    let predictionValues = [];
-    let highestIndex;
-    let count = 0;
-    let previousPrediction;
+    let count= 0;
 
     // Load the image model and setup the webcam
     async function init() {
         const modelURL = URL + "model.json";
         const metadataURL = URL + "metadata.json";
-
-        //remove button
-        let button = document.getElementById("button-start");
-        button.parentNode.removeChild(button);
 
         // load the model and metadata
         // Refer to tmImage.loadFromFiles() in the API to support files from a file picker
@@ -32,7 +26,7 @@
 
         // Convenience function to setup a webcam
         const flip = true; // whether to flip the webcam
-        webcam = new tmImage.Webcam(200, 200, flip); // width, height, flip
+        webcam = new tmImage.Webcam(300, 300, flip); // width, height, flip
         await webcam.setup(); // request access to the webcam
         await webcam.play();
         window.requestAnimationFrame(loop);
@@ -46,44 +40,22 @@
     }
 
     async function loop() {
-            webcam.update(); // update the webcam frame
-            let prediction = await predict();
-            window.requestAnimationFrame(loop);
-
-
-        
-        if(count == 0) {
-            if(prediction[highestIndex].probability > 0.9) {
-                previousPrediction = prediction[highestIndex].className
-                count = 1
-            }
-        }
-
-        if(prediction[highestIndex].className == previousPrediction && prediction[highestIndex].probability > 0.9) {
+        webcam.update(); // update the webcam frame
+        let predictionResult = await predict();
+        window.requestAnimationFrame(loop);
+    
+       
+        if(predictionResult >= 0.8) {
             count++
+            console.log("doet het ily")
         }
 
-        if(prediction[highestIndex].className != previousPrediction) {
-            count = 0
+        if (count > 200) {
+            console.log("doet het nogmaals ily");
+            window.location.href = "rightMovement2.html";
         }
-
-
-        if (count > 60) {
-            if(previousPrediction == "Plastic") {
-                rotatePlastic();
-                count = -1
-
-                var delayInMilliseconds = 6000; 
-                setTimeout(function() {
-                    count = 0;
-                    }, delayInMilliseconds); 
-            }
-        }
-
-        console.log("count: ", count)
-        
-
     }
+   
 
     // run the webcam image through the image model
     async function predict() {
@@ -95,17 +67,8 @@
             labelContainer.childNodes[i].innerHTML = classPrediction;
         }
 
-        predictionValues = [prediction[0].probability, prediction[1].probability, prediction[2].probability];
-        highestIndex = predictionValues.indexOf(Math.max.apply(Math, predictionValues))
+        return prediction[0].probability;
 
-        div.innerHTML = prediction[highestIndex].className
-        predictionContainer.appendChild(div)
-        
-        console.log(prediction)
-
-        return prediction;
     }
+   
 
-    function myFunction() {
-        document.getElementById("demo").innerHTML = "Hello World";
-      }

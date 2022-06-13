@@ -62,3 +62,7 @@ a{
     width: 30%;
     height: 30vh;
 }
+
+#logo{
+    padding-top:0;
+}
