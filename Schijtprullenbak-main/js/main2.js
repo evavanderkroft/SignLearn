@@ -39,6 +39,7 @@
         }
     }
 
+
     async function loop() {
         webcam.update(); // update the webcam frame
         let predictionResult = await predict();

@@ -27,11 +27,24 @@
                     <img src="./img/i-love-you-sign-language.gif" alt="i love you in sign language" width="400" height="auto">
                 </div>
                 <div class="card-body d-flex justify-content-center align-items-center">
-                    <a type="button" class="btn btn-success "   id="button-start">Thank you</a>
-                    <a type="button" class="btn btn-success "  id="button-start">Please</a>
-                    <a type="button" class="btn btn-success "  id="button-start">Hello</a>
-                    <a type="button" class="btn btn-success "  id="button-start">No</a>
+                    <a type="button" class="btn btn-success "   id="button-start" data-bs-toggle="modal" data-bs-target="#staticBackdrop">Thank you</a>
+                    <a type="button" class="btn btn-success "  id="button-start" data-bs-toggle="modal" data-bs-target="#staticBackdrop">Please</a>
+                    <a type="button" class="btn btn-success "  id="button-start" data-bs-toggle="modal" data-bs-target="#staticBackdrop">Hello</a>
+                    <a type="button" class="btn btn-success "  id="button-start" data-bs-toggle="modal" data-bs-target="#staticBackdrop">No</a>
                     <a type="button" class="btn btn-success " href="rightAnswer3.html" id="button-start">Love you</a>
+
+                    <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                        <div class="modal-dialog modal-dialog-centered">
+                          <div class="modal-content">
+                            <div class="modal-body">
+                              You chose the wrong answer. Please give it another try!
+                            </div>
+                            <div class="modal-footer">
+                              <button type="button" class="btn btn-success" data-bs-dismiss="modal">Understood</button>
+                            </div>
+                          </div>
+                        </div>
+                    </div>
                 </div>
                 </div>
             </div></div>
