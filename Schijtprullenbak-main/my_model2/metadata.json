@@ -1,1 +1,1 @@
-{"tfjsVersion":"1.3.1","tmVersion":"2.4.5","packageVersion":"0.8.4-alpha2","packageName":"@teachablemachine/image","timeStamp":"2022-06-13T12:24:07.557Z","userMetadata":{},"modelName":"tm-my-image-model","labels":["I love you","nothing"],"imageSize":224}
+{"tfjsVersion":"1.3.1","tmVersion":"2.4.5","packageVersion":"0.8.4-alpha2","packageName":"@teachablemachine/image","timeStamp":"2022-06-16T10:56:05.574Z","userMetadata":{},"modelName":"tm-my-image-model","labels":["i love you"," "],"imageSize":224}
